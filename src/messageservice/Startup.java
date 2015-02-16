@@ -15,9 +15,10 @@ public class Startup {
     public static void main(String[] args) {
         MessageService messageService = new MessageService(
                 //new MetaphorOfTheDayStrategy());
-                //new MorningGreetingStrategy(),
-                new GuiMessage());
-        messageService.showMessage();
+               new MorningGreetingStrategy()
+               // new GuiMessage();
+        );
+        System.out.println(messageService.showMessage()); 
    messageService.addMessage();
     }
     

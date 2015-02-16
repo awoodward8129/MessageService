@@ -19,7 +19,7 @@ public class GuiMessage implements MessageStrategy  {
  
     @Override
     
-    public void returnMessage() {
+    public String returnMessage() {
        Object[] options = {"Yes, please",
                     "No way!"};
 int n = JOptionPane.showOptionDialog(

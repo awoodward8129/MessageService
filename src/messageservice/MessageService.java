@@ -25,8 +25,8 @@ public class MessageService {
         this.messageStrategy = messageStrategy;
     }
     
-    public void showMessage() {
-        messageStrategy.returnMessage();
+    public String showMessage() {
+      return  messageStrategy.returnMessage();
     }
      
  
