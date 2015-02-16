@@ -13,7 +13,7 @@ package messageservice;
 public interface MessageStrategy {
     
     
-    public String returnMessage();
+    public void returnMessage();
     public void addMessage();
     
 }

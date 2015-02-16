@@ -19,11 +19,11 @@ public class MetaphorOfTheDayStrategy implements MessageStrategy {
                             "Drink like a fish"};
 
     @Override
-    public String returnMessage() {
+    public void returnMessage() {
 
         Random decider = new Random();
 
-        return greetings[decider.nextInt(greetings.length)];
+        System.out.println( greetings[decider.nextInt(greetings.length)]);
     }
 
     @Override

@@ -20,35 +20,22 @@ public class MorningGreetingStrategy implements MessageStrategy {
                             "Enjoy your day", "I am bacon cake", "Sure is cold out today..."};
     //private String newMessage;
     private Component frame;
+    private String newMessage;
 
     @Override
-    public String returnMessage() {
+    public void returnMessage() {
 
         Random decider = new Random();
 
-        return greetings[decider.nextInt(greetings.length)];
+        System.out.println(greetings[decider.nextInt(greetings.length)]);
     }
 
     @Override
     public void addMessage() {
-Object[] options = {"Yes, please",
-                    "No way!"};
-int n = JOptionPane.showOptionDialog(frame,
-    "Would you like green eggs and ham?",
-    "A Silly Question",
-    JOptionPane.YES_NO_OPTION,
-    JOptionPane.QUESTION_MESSAGE,
-    null,     //do not use a custom Icon
-    options,  //the titles of buttons
-    options[0]); //default button title
-
-if (n == JOptionPane.YES_OPTION) {
-          JOptionPane.showMessageDialog(null, "HELLO");
-        }
-        else {
-           JOptionPane.showMessageDialog(null, "GOODBYE");
-           System.exit(0);
-        }
+     System.out.println("What would you like to say for the Morning Greeting of the Day?");
+        Scanner keyboard = new Scanner(System.in);
+        newMessage= keyboard.nextLine();
+        System.out.println(newMessage);
 }
     
 }
